@@ -1,0 +1,42 @@
+Items needing investigation or implementation for RuleDispatch 1.0
+
+ * "predicate functions" -- inline a function or method call into a dispatch
+   expression/criterion
+
+ * "classifiers" -- provide a way to easily define an ordered classification of
+   items of some type
+
+ * "matching and binding" -- add ways to do pattern matching and binding
+   dispatch expressions to variables that can then be used in a function body
+
+ * removing rules from a dispatcher, either manually or automatically (as when
+   an 'is'-based criterion becomes invalid due to GC of the target)
+
+ * move from using "dispatch function" on criteria to using index/node classes
+
+Documentation needed for dispatch package in RuleDispatch 1.0
+
+ * Basics -- strategy.default, dispatch.on(), dispatch.generic(), Dispatcher,
+   f.when()
+
+ * Translation reference (in, is, isinstance/issubclass, etc.)
+
+ * Dynamic construction -- Signature, Argument, Predicate, PositionalSignature,
+
+ * Adding new criteria (ICriterion, expressionSignature, validateCriterion)
+   [Issue: current mechanism needs to change to index/node classes; see above]
+
+ * ast_builder (define IPyBuilder interface, finish constructs like for/lambda)
+
+ * Misc. -- dispatch.as()
+
+ * Implementation info
+    'ProtocolCriterion', 'ClassCriterion', 'SubclassCriterion', 'Inequality',
+    'AndCriterion', 'OrCriterion', 'NotCriterion', 'TruthCriterion',
+    'Min', 'Max', 'Pointer', 'dispatch_by_truth',
+    'IdentityCriterion', 'NullCriterion',
+    'Call', 'ExprBuilder', 'Const', 'Getattr', 'Tuple',
+    'OrExpr', 'AndExpr', 'CriteriaBuilder',
+
+
+

@@ -1,0 +1,53 @@
+Metadata-Version: 1.0
+Name: RuleDispatch
+Version: 0.5a1.dev-r2506
+Summary: Rule-based Dispatching and Generic Functions
+Home-page: http://pypi.python.org/pypi/RuleDispatch
+Author: Phillip J. Eby
+Author-email: peak@eby-sarna.com
+License: PSF or ZPL
+Download-URL: http://peak.telecommunity.com/snapshots/
+Description: RuleDispatch
+        ============
+        
+        RuleDispatch is a prototype implementation of the Chambers and Chen
+        "efficient multiple and predicate dispatch" algorithm for Python.  It lets you
+        specify a function in terms of a collection of arbitrary rules, including
+        Lisp-style "before/after/around" methods.
+        
+        Although it is used by various projects, including ``peak.security.rules`` and
+        TurboGears, it is no longer being actively developed.  It is expected to be
+        replaced by the more extensible PEAK-Rules package, which is currently in
+        development (with snapshot and SVN releases available in PyPI).
+        
+        Please note that if you are starting new development, you are almost certainly
+        better off using PEAK-Rules instead.  It is smaller, has a simpler API, and for
+        certain use cases can be significantly faster than RuleDispatch.  It was also
+        developed from the ground up using TDD, which means that every single line of
+        its code is tested.  In contrast, the central core of RuleDispatch was
+        developed many years ago using a hack, slash, and burn methodology, with only
+        some functional tests and very few unit tests.  The consequences of this can be
+        seen in the number of RuleDispatch bugs that have occurred over the last few
+        years that involve the core engine in some way.
+        
+        So, although I will continue to accept bug reports and apply fixes to
+        RuleDispatch, it is absolutely a dead parrot, and there are no plans to update
+        its documentation, tests, or anything else.  Use it at your own risk.
+        
+        
+        Python 2.5 Issues
+        -----------------
+        RuleDispatch has not been updated for certain additions to the Python 2.5
+        grammar.  It does not support any kind of loops, generator expressions or
+        "y if x else z" conditional expressions in rules, and its behavior if you use
+        them is undefined.
+        
+        
+        Mailing List
+        ------------
+        
+        Please direct questions regarding this package to the PEAK mailing list; see
+        http://www.eby-sarna.com/mailman/listinfo/PEAK/ for details.
+        
+        
+Platform: UNKNOWN
