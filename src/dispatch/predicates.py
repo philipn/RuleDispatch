@@ -376,7 +376,7 @@ class Call(ExprBase):
             return ExprBase.__new__(klass,function)
         for arg in argexprs:
             if not isinstance(arg,Const):
-                return ExprBase.__new__(klass,function,*argexprs)
+                return ExprBase.__new__(klass)
         return Const(function(*[arg.value for arg in argexprs]))
 
     def __init__(self,function,*argexprs):
